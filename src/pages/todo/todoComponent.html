@@ -8,24 +8,42 @@
 
 <ion-content padding>
   <div id="addTodo">
-    <ion-row>
-      <ion-col width-90>
-        <ion-input type="text" placeholder="Create Todo" [(ngModel)]="newTodoTitle"></ion-input>
-      </ion-col>
+    <ion-card>
+      <ion-row>
+        <ion-col width-90>
+          <ion-input type="text" placeholder="Create Todo" [(ngModel)]="newTodoTitle"></ion-input>
+        </ion-col>
 
-      <ion-col width-10>
-        <button ion-button small outline color="default" (click)="createTodo()">
-          <ion-icon name="add"></ion-icon>
-        </button>
-      </ion-col>
-    </ion-row>
+        <ion-col width-10>
+          <button ion-button small outline color="default" (click)="createTodo()">
+            <ion-icon name="add"></ion-icon>
+          </button>
+        </ion-col>
+      </ion-row>
+    </ion-card>
   </div>
 
-  <div id="currentTodos">
-    <h2>Current Todo's</h2>
-  </div>
+<ion-row>
+  <ion-col width-50>
+    <div id="currentTodos">
+      <ion-card>
+        <ion-card-header>
+          <h2>Current Todo's</h2>
+        </ion-card-header>
 
-  <div id="completedTodos">
-    <h2>Completed Todo's</h2>
-  </div>
+        <ion-card>
+          <h2>example content</h2>
+        </ion-card>
+
+      </ion-card>
+
+    </div>
+  </ion-col>
+
+  <ion-col width-50>
+    <div id="completedTodos">
+      <h2>Completed Todo's</h2>
+    </div>
+  </ion-col>
+</ion-row>
 </ion-content>
